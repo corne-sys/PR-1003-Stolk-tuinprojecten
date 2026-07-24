@@ -203,25 +203,28 @@ export default function HomePage() {
         <div className="mt-10 grid gap-6 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <PlaceholderImage
-              src="compact-garden.svg"
+              src="compact-garden.png"
               alt="Compacte stadstuin met doordachte indeling"
               aspect="3/2"
+              photo
             />
             <p className="mt-3 font-sans text-sm text-charcoal/70">Compacte stadstuin</p>
           </div>
           <div className="lg:col-span-5">
             <PlaceholderImage
-              src="spacious-garden.svg"
+              src="spacious-garden.png"
               alt="Ruime landelijke tuin met natuurlijke beplanting"
               aspect="4/3"
+              photo
             />
             <p className="mt-3 font-sans text-sm text-charcoal/70">Ruime landelijke tuin</p>
           </div>
           <div className="lg:col-span-3">
             <PlaceholderImage
-              src="business-garden.svg"
+              src="business-garden.png"
               alt="Zakelijke buitenruimte met representatief terras"
               aspect="3/2"
+              photo
             />
             <p className="mt-3 font-sans text-sm text-charcoal/70">Zakelijke buitenruimte</p>
           </div>
