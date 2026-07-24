@@ -127,7 +127,7 @@ export default function HomePage() {
           <div>
             {/* Foto aangeleverd door klant. Vervang door een echte
                 projectfoto van Stolk Tuinprojecten zodra beschikbaar. */}
-            <div className="shadow-image-frame relative aspect-[4/5] w-full overflow-hidden rounded-[14px]">
+            <div className="shadow-image-frame relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
               <Image
                 src="/images/photos/hero-garden.png"
                 alt="Verzorgde tuin met gazon, border en zitje onder bomen"

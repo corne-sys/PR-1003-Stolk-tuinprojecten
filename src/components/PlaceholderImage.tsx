@@ -37,7 +37,7 @@ export function PlaceholderImage({
 }: PlaceholderImageProps) {
   return (
     <div
-      className={`relative w-full overflow-hidden ${aspectClass[aspect]} ${
+      className={`relative w-full overflow-hidden rounded-2xl ${aspectClass[aspect]} ${
         framed ? "leaf-path-clip shadow-image-frame" : ""
       } ${className}`}
     >
