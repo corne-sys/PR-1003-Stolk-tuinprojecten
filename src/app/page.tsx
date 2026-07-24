@@ -104,7 +104,7 @@ export default function HomePage() {
       {/* 1. Hero */}
       <section className="relative overflow-hidden bg-linen">
         <div className="mx-auto grid max-w-[1280px] gap-10 px-5 pb-16 pt-12 sm:px-8 sm:pt-16 lg:grid-cols-[7fr_5fr] lg:items-center lg:gap-8 lg:pb-24 lg:pt-20">
-          <div>
+          <div className="flex flex-col">
             <p className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-moss">
               Hovenier vanuit Wijngaarden
             </p>
@@ -115,18 +115,19 @@ export default function HomePage() {
               Stolk Tuinprojecten ontwerpt en realiseert landelijke en moderne tuinen
               voor particulieren en bedrijven in Wijngaarden, Molenlanden en omgeving.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+
+            {/* Knopen op desktop onder de tekst, op mobiel verborgen en onder de foto geplaatst */}
+            <div className="mt-8 hidden flex-col gap-3 sm:flex-row lg:flex">
               <PhoneButton />
               <WhatsAppButton />
             </div>
-            <p className="mt-5 font-sans text-sm text-charcoal/60">
+            <p className="mt-5 hidden font-sans text-sm text-charcoal/60 lg:block">
               Persoonlijk contact met Lucas Stolk
             </p>
           </div>
 
           <div>
-            {/* Foto aangeleverd door klant. Vervang door een echte
-                projectfoto van Stolk Tuinprojecten zodra beschikbaar. */}
+            {/* Foto aangeleverd door klant. */}
             <div className="shadow-image-frame relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
               <Image
                 src="/images/photos/hero-garden.png"
@@ -137,6 +138,15 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
+
+            {/* Op mobiel komen de knoppen direct onder de foto */}
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row lg:hidden">
+              <PhoneButton />
+              <WhatsAppButton />
+            </div>
+            <p className="mt-4 font-sans text-sm text-charcoal/60 lg:hidden">
+              Persoonlijk contact met Lucas Stolk
+            </p>
           </div>
         </div>
       </section>
