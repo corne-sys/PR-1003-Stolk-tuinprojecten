@@ -3,7 +3,6 @@ import { Petrona, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { StickyCallBar } from "@/components/StickyCallBar";
 import { JsonLd } from "@/components/JsonLd";
 import { company, workingAreas } from "@/lib/site-config";
 
@@ -81,7 +80,7 @@ export default function RootLayout({
       lang="nl"
       className={`${petrona.variable} ${workSans.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col pb-16 lg:pb-0">
+      <body className="flex min-h-full flex-col">
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={websiteJsonLd} />
         <a
@@ -95,7 +94,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <StickyCallBar />
       </body>
     </html>
   );
