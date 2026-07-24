@@ -117,10 +117,6 @@ export default function ReviewsPage() {
               </p>
             </div>
           </div>
-          <div className="font-sans text-xs text-charcoal/70 sm:text-right">
-            <p className="font-medium text-forest-deep">100% Tevredenheidgarantie</p>
-            <p className="mt-0.5">Persoonlijke begeleiding door Lucas Stolk</p>
-          </div>
         </div>
       </Section>
 
