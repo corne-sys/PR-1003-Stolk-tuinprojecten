@@ -18,9 +18,9 @@ export const metadata: Metadata = {
 };
 
 const projectImages: Record<string, string> = {
-  "landelijke-tuin-molenlanden": "project-molenlanden-1.svg",
-  "moderne-gezinstuin-dordrecht": "project-dordrecht-1.svg",
-  "compacte-tuin-gorinchem": "project-gorinchem-1.svg",
+  "landelijke-tuin-molenlanden": "project-molenlanden-1.jpg",
+  "moderne-gezinstuin-dordrecht": "project-dordrecht-1.jpg",
+  "compacte-tuin-gorinchem": "project-gorinchem-1.jpg",
 };
 
 export default function ProjectenPage() {
@@ -59,6 +59,7 @@ export default function ProjectenPage() {
                 src={projectImages[project.slug] ?? "hero.svg"}
                 alt={project.images[0]?.alt ?? project.title}
                 aspect="4/3"
+                photo={!!projectImages[project.slug]}
               />
               <p className="mt-4 font-sans text-xs font-medium uppercase tracking-[0.1em] text-moss">
                 {project.region} · {project.gardenType}

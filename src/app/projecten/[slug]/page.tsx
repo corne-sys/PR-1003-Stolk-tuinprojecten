@@ -8,9 +8,9 @@ import { JsonLd } from "@/components/JsonLd";
 import { company, getProjectBySlug, projects } from "@/lib/site-config";
 
 const projectImageFiles: Record<string, string[]> = {
-  "landelijke-tuin-molenlanden": ["project-molenlanden-1.svg", "project-molenlanden-2.svg"],
-  "moderne-gezinstuin-dordrecht": ["project-dordrecht-1.svg", "project-dordrecht-2.svg"],
-  "compacte-tuin-gorinchem": ["project-gorinchem-1.svg"],
+  "landelijke-tuin-molenlanden": ["project-molenlanden-1.jpg"],
+  "moderne-gezinstuin-dordrecht": ["project-dordrecht-1.jpg"],
+  "compacte-tuin-gorinchem": ["project-gorinchem-1.jpg"],
 };
 
 export function generateStaticParams() {
@@ -86,14 +86,15 @@ export default async function ProjectDetailPage({
       </Section>
 
       <Section tone="linen" className="!pt-0">
-        <div className="grid gap-6 border-t border-sand pt-12 sm:grid-cols-2">
+        <div className="border-t border-sand pt-12">
           {images.map((src, i) => (
             <PlaceholderImage
               key={src}
               src={src}
               alt={project.images[i]?.alt ?? project.title}
-              aspect="4/3"
-              framed={i === 0}
+              aspect="16/9"
+              framed
+              photo
             />
           ))}
         </div>

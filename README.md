@@ -24,7 +24,7 @@ npm run start    # start production build lokaal
   valideert (zie "Vóór livegang" hieronder — de daadwerkelijke verzending is
   nog niet gekoppeld).
 - `src/components/` — herbruikbare componenten (Header, Footer, CTA-knoppen,
-  PlaceholderImage, LeafSweepAnimation, Faq, Section, JsonLd).
+  PlaceholderImage, Faq, Section, JsonLd).
 - `src/app/` — routes: `/`, `/over-ons`, `/projecten`, `/projecten/[slug]`,
   `/reviews`, `/contact`, `/privacyverklaring`.
 - `public/images/placeholders/` — tijdelijke illustratieve SVG-afbeeldingen

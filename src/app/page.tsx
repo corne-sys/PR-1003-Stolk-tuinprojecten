@@ -4,7 +4,6 @@ import Link from "next/link";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Section } from "@/components/Section";
-import { LeafSweepAnimation } from "@/components/LeafSweepAnimation";
 import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
 import { company, projects, workingAreas } from "@/lib/site-config";
@@ -105,7 +104,7 @@ export default function HomePage() {
       {/* 1. Hero */}
       <section className="relative overflow-hidden bg-linen">
         <div className="mx-auto grid max-w-[1280px] gap-10 px-5 pb-16 pt-12 sm:px-8 sm:pt-16 lg:grid-cols-[7fr_5fr] lg:items-center lg:gap-8 lg:pb-24 lg:pt-20">
-          <div className="order-2 lg:order-1">
+          <div>
             <p className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-moss">
               Hovenier vanuit Wijngaarden
             </p>
@@ -125,14 +124,13 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="order-1 lg:order-2">
-            {/* Foto: Eugenia Pan'kiv (@eugenivy_now) via Unsplash — vrij te
-                gebruiken (Unsplash License). Vervang door een echte
-                projectfoto zodra beschikbaar. */}
-            <div className="leaf-path-clip shadow-image-frame relative aspect-[4/5] w-full overflow-hidden">
+          <div>
+            {/* Foto aangeleverd door klant. Vervang door een echte
+                projectfoto van Stolk Tuinprojecten zodra beschikbaar. */}
+            <div className="shadow-image-frame relative aspect-[4/5] w-full overflow-hidden rounded-[14px]">
               <Image
-                src="/images/photos/hero-garden.jpg"
-                alt="Verzorgde tuin met strak geknipte hagen en een pad van natuursteen, in warm avondlicht"
+                src="/images/photos/hero-garden.png"
+                alt="Verzorgde tuin met gazon, border en zitje onder bomen"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
@@ -142,10 +140,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <div className="bg-linen py-4">
-        <LeafSweepAnimation />
-      </div>
 
       {/* 2. Korte positionering */}
       <Section tone="linen">
@@ -286,14 +280,15 @@ export default function HomePage() {
               <PlaceholderImage
                 src={
                   i === 0
-                    ? "project-molenlanden-1.svg"
+                    ? "project-molenlanden-1.jpg"
                     : i === 1
-                      ? "project-dordrecht-1.svg"
-                      : "project-gorinchem-1.svg"
+                      ? "project-dordrecht-1.jpg"
+                      : "project-gorinchem-1.jpg"
                 }
                 alt={project.images[0]?.alt ?? project.title}
                 aspect="4/3"
                 framed={i === 0}
+                photo
               />
               <p className="mt-4 font-sans text-xs font-medium uppercase tracking-[0.1em] text-moss">
                 {project.region}

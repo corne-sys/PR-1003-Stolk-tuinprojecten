@@ -151,9 +151,6 @@ Zachte hoeken zijn selectief, niet overal: knoppen en formuliervelden krijgen 6p
 ### Navigation
 - **Style:** Work Sans label-formaat, geen tracked-uppercase overkill; actieve pagina krijgt een dunne mosgroen-onderstreping (geen pill-achtergrond). Sticky header wordt compact (kleinere hoogte, bosgroen-inkt achtergrond) na scroll. Mobiel: volledig-scherm menu met grote tikbare items en zichtbare focus-states.
 
-### Blad-veeg-animatie (signature component)
-Illustratieve SVG-silhouet van een tuinman met bezem die bladeren langs een organische pad-lijn wegveegt bij eerste keer in beeld; speelt maximaal éénmaal per sessie, respecteert `prefers-reduced-motion` (dan: statische eindcompositie). Gebruikt als overgang tussen hero en introductiesectie.
-
 ## Do's and Don'ts
 
 ### Do:

@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 type PlaceholderImageProps = {
-  /** Bestandsnaam onder /public/images/placeholders/, bv. "hero.svg". */
+  /** Bestandsnaam onder /public/images/placeholders/ (of /images/photos/
+   * wanneer `photo` true is), bv. "hero.svg" of "project-dordrecht-1.jpg". */
   src: string;
   /** Betekenisvolle Nederlandse alt-tekst die de uiteindelijke foto beschrijft. */
   alt: string;
@@ -9,6 +10,8 @@ type PlaceholderImageProps = {
   priority?: boolean;
   framed?: boolean;
   className?: string;
+  /** true = echte foto onder /images/photos/, false (default) = illustratieve placeholder. */
+  photo?: boolean;
 };
 
 const aspectClass: Record<NonNullable<PlaceholderImageProps["aspect"]>, string> = {
@@ -19,10 +22,9 @@ const aspectClass: Record<NonNullable<PlaceholderImageProps["aspect"]>, string> 
 };
 
 /**
- * Tijdelijke, hoogwaardige illustratieve afbeelding (line-art in huisstijl-
- * kleuren) totdat echte projectfoto's beschikbaar zijn. Vervang het bestand
- * onder /public/images/placeholders door een echte foto (WebP/AVIF
- * aanbevolen) — de component en zijn props hoeven dan niet te veranderen.
+ * Toont een illustratieve placeholder (line-art, `/images/placeholders/`) of,
+ * met `photo`, een echte foto (`/images/photos/`) — zelfde aspect/framed-
+ * styling in beide gevallen.
  */
 export function PlaceholderImage({
   src,
@@ -31,6 +33,7 @@ export function PlaceholderImage({
   priority = false,
   framed = false,
   className = "",
+  photo = false,
 }: PlaceholderImageProps) {
   return (
     <div
@@ -39,7 +42,7 @@ export function PlaceholderImage({
       } ${className}`}
     >
       <Image
-        src={`/images/placeholders/${src}`}
+        src={`/images/${photo ? "photos" : "placeholders"}/${src}`}
         alt={alt}
         fill
         sizes="(min-width: 1024px) 50vw, 100vw"
