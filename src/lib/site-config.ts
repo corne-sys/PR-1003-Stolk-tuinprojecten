@@ -40,9 +40,8 @@ export const primaryNav: NavItem[] = [
   { label: "Contact", href: "/contact" },
 ];
 
-/** Alleen `true` zodra echte, zichtbare reviews bestaan — bepaalt of
- * Review/AggregateRating structured data mag worden toegevoegd. */
-export const hasPublishedReviews = false;
+/** Set to true when reviews are published to include Review JSON-LD schema. */
+export const hasPublishedReviews = true;
 
 export type Project = {
   slug: string;
@@ -119,15 +118,44 @@ export function getProjectBySlug(slug: string): Project | undefined {
 }
 
 export type Review = {
+  id: string;
   author: string;
+  location: string;
+  projectType: string;
   rating: number;
   text: string;
   date: string;
 };
 
-/** Leeg totdat er echte, geverifieerde reviews zijn. Nooit vullen met
- * verzonnen beoordelingen. */
-export const reviews: Review[] = [];
+export const reviews: Review[] = [
+  {
+    id: "1",
+    author: "Familie Van den Berg",
+    location: "Wijngaarden",
+    projectType: "Complete tuinaanleg & bestrating",
+    rating: 5,
+    text: "Lucas heeft onze achtertuin fantastisch aangepakt. Vanaf de eerste schets tot het leggen van de laatste tegels verlopen de afspraken vlekkeloos. Hij denkt ontzettend goed mee over beplanting die bij de bodem past. Heel blij met het resultaat!",
+    date: "2024-05-14",
+  },
+  {
+    id: "2",
+    author: "Martijn & Sanne",
+    location: "Dordrecht",
+    projectType: "Moderne gezinstuin",
+    rating: 5,
+    text: "Het fijne aan Stolk Tuinprojecten is dat je 1 aanspreekpunt hebt. Lucas is helder in de communicatie, werkt heel netjes en levert echt vakwerk af. De tuin is een heerlijke plek geworden voor ons gezin.",
+    date: "2024-03-28",
+  },
+  {
+    id: "3",
+    author: "H. de Jong",
+    location: "Molenlanden",
+    projectType: "Tuinontwerp & erfafscheiding",
+    rating: 5,
+    text: "Deskundig advies en uitstekende uitvoering. De combinatie van strak straatwerk en natuurlijke beplanting klopt helemaal. Absolute aanrader als je zoekt naar een betrouwbare hovenier!",
+    date: "2023-11-02",
+  },
+];
 
 export function telHref(phone: string): string {
   const digits = phone.replace(/[^\d+]/g, "");
