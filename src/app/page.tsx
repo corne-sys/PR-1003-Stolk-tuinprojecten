@@ -121,9 +121,6 @@ export default function HomePage() {
               <PhoneButton />
               <WhatsAppButton />
             </div>
-            <p className="mt-5 hidden font-sans text-sm text-charcoal/60 lg:block">
-              Persoonlijk contact met Lucas Stolk
-            </p>
           </div>
 
           <div>
@@ -144,9 +141,6 @@ export default function HomePage() {
               <PhoneButton />
               <WhatsAppButton />
             </div>
-            <p className="mt-4 font-sans text-sm text-charcoal/60 lg:hidden">
-              Persoonlijk contact met Lucas Stolk
-            </p>
           </div>
         </div>
       </section>
