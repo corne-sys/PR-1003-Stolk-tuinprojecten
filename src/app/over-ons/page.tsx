@@ -72,11 +72,12 @@ export default function OverOnsPage() {
       <Section tone="linen" className="!pb-0">
         <div className="grid gap-10 lg:grid-cols-[5fr_7fr] lg:items-center">
           <PlaceholderImage
-            src="portrait-lucas.svg"
-            alt="Portret van Lucas Stolk, eigenaar van Stolk Tuinprojecten"
+            src="lucas-stolk-planting.png"
+            alt="Lucas Stolk aan het werk in de tuin, met aandacht aan het planten"
             aspect="4/5"
             priority
             framed
+            photo
           />
           <div>
             <p className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-moss">
