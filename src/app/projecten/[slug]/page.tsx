@@ -93,7 +93,6 @@ export default async function ProjectDetailPage({
               src={src}
               alt={project.images[i]?.alt ?? project.title}
               aspect="16/9"
-              framed
               photo
             />
           ))}

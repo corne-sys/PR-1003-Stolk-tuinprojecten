@@ -76,7 +76,6 @@ export default function OverOnsPage() {
             alt="Lucas Stolk aan het werk in de tuin, met aandacht aan het planten"
             aspect="4/5"
             priority
-            framed
             photo
           />
           <div>

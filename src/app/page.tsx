@@ -290,7 +290,6 @@ export default function HomePage() {
                 }
                 alt={project.images[0]?.alt ?? project.title}
                 aspect="4/3"
-                framed={i === 0}
                 photo
               />
               <p className="mt-4 font-sans text-xs font-medium uppercase tracking-[0.1em] text-moss">
