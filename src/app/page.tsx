@@ -28,7 +28,7 @@ const whyPoints = [
   },
   {
     title: "Eén vast aanspreekpunt",
-    text: "U schakelt gedurende het hele traject rechtstreeks met Lucas Stolk.",
+    text: "U schakelt gedurende het hele traject rechtstreeks met Lucas.",
   },
   {
     title: "Ontwerp en aanleg als geheel",
@@ -66,7 +66,7 @@ export default function HomePage() {
         name: "Kan ik terecht voor zowel tuinontwerp als aanleg?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ja. Stolk Tuinprojecten verzorgt zowel het ontwerp als de complete aanleg, met Lucas Stolk als vast aanspreekpunt door het hele traject.",
+          text: "Ja. Stolk Tuinprojecten verzorgt zowel het ontwerp als de complete aanleg, met Lucas als vast aanspreekpunt door het hele traject.",
         },
       },
       {
@@ -82,7 +82,7 @@ export default function HomePage() {
         name: "Kan ik direct telefonisch overleggen?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ja. Bel of app rechtstreeks met Lucas Stolk om uw tuinplannen te bespreken.",
+          text: "Ja. Bel of app rechtstreeks met Lucas om uw tuinplannen te bespreken.",
         },
       },
       {
@@ -154,7 +154,7 @@ export default function HomePage() {
           <p className="mt-6 font-sans text-[1.0625rem] leading-relaxed text-charcoal/85">
             Stolk Tuinprojecten combineert het ontwerp van uw tuin met de volledige
             aanleg ervan. Geen wisselende contactpersonen en geen losse partijen
-            die op elkaar moeten wachten: Lucas Stolk denkt mee vanaf de eerste
+            die op elkaar moeten wachten: Lucas denkt mee vanaf de eerste
             schets tot en met de oplevering.
           </p>
           <p className="mt-4 font-sans text-[1.0625rem] leading-relaxed text-charcoal/85">
@@ -340,7 +340,7 @@ export default function HomePage() {
               Plannen voor een nieuwe tuin?
             </h2>
             <p className="mt-4 max-w-[48ch] font-sans text-[1.0625rem] leading-relaxed text-linen/85">
-              Bespreek uw wensen rechtstreeks met Lucas Stolk.
+              Bespreek uw wensen rechtstreeks met Lucas.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">

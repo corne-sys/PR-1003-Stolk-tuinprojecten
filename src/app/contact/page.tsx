@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | Stolk Tuinprojecten",
-    description: "Hovenier Wijngaarden — bel of app rechtstreeks met Lucas Stolk.",
+    description: "Hovenier Wijngaarden — bel of app rechtstreeks met Lucas.",
     url: "/contact",
   },
 };

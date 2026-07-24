@@ -149,7 +149,7 @@ export default async function ProjectDetailPage({
               Vergelijkbaar project in gedachten?
             </h2>
             <p className="mt-4 max-w-[44ch] font-sans text-[1.0625rem] leading-relaxed text-linen/85">
-              Bespreek de mogelijkheden voor uw tuin rechtstreeks met Lucas Stolk.
+              Bespreek de mogelijkheden voor uw tuin rechtstreeks met Lucas.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">

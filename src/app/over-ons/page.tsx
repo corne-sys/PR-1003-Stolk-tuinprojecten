@@ -6,12 +6,12 @@ import { JsonLd } from "@/components/JsonLd";
 import { company, workingAreas } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Over Lucas Stolk | Hovenier vanuit Wijngaarden",
+  title: "Over Lucas | Hovenier vanuit Wijngaarden",
   description:
-    "Lucas Stolk is eigenaar van Stolk Tuinprojecten en uw vaste aanspreekpunt voor tuinontwerp en tuinaanleg, werkzaam vanuit Wijngaarden.",
+    "Lucas is eigenaar van Stolk Tuinprojecten en uw vaste aanspreekpunt voor tuinontwerp en tuinaanleg, werkzaam vanuit Wijngaarden.",
   alternates: { canonical: "/over-ons" },
   openGraph: {
-    title: "Over Lucas Stolk | Hovenier vanuit Wijngaarden",
+    title: "Over Lucas | Hovenier vanuit Wijngaarden",
     description:
       "Eigenaar van Stolk Tuinprojecten, uw vaste aanspreekpunt voor tuinontwerp en aanleg.",
     url: "/over-ons",
@@ -73,7 +73,7 @@ export default function OverOnsPage() {
         <div className="grid gap-10 lg:grid-cols-[5fr_7fr] lg:items-center">
           <PlaceholderImage
             src="lucas-stolk-planting.png"
-            alt="Lucas Stolk aan het werk in de tuin, met aandacht aan het planten"
+            alt="Lucas aan het werk in de tuin, met aandacht aan het planten"
             aspect="4/5"
             priority
             photo
@@ -168,7 +168,7 @@ export default function OverOnsPage() {
               Liever direct even overleggen?
             </h2>
             <p className="mt-4 max-w-[44ch] font-sans text-[1.0625rem] leading-relaxed text-linen/85">
-              Bel of app rechtstreeks met Lucas Stolk.
+              Bel of app rechtstreeks met Lucas.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">

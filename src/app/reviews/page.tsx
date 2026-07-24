@@ -7,7 +7,7 @@ import { company, reviews, hasPublishedReviews } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Reviews & Ervaringen | Stolk Tuinprojecten",
   description:
-    "Lees wat tevreden klanten vertellen over hun ervaringen met Lucas Stolk en Stolk Tuinprojecten in Wijngaarden en omstreken.",
+    "Lees wat tevreden klanten vertellen over hun ervaringen met Lucas en Stolk Tuinprojecten in Wijngaarden en omstreken.",
   alternates: { canonical: "/reviews" },
   openGraph: {
     title: "Reviews & Ervaringen | Stolk Tuinprojecten",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const expectations = [
-  { title: "Persoonlijk contact", text: "U schakelt rechtstreeks met Lucas Stolk, niet met een tussenpersoon." },
+  { title: "Persoonlijk contact", text: "U schakelt rechtstreeks met Lucas, niet met een tussenpersoon." },
   { title: "Duidelijke afspraken", text: "Vooraf helderheid over de planning, kosten en werkzaamheden." },
   { title: "Eén aanspreekpunt", text: "Dezelfde hovenier begeleidt ontwerp én complete aanleg." },
   { title: "Aandacht voor de afwerking", text: "Zorgvuldig werk met oog voor detail, van grondwerk tot oplevering." },

@@ -26,6 +26,16 @@ export const metadata: Metadata = {
   },
   description:
     "Stolk Tuinprojecten verzorgt tuinontwerp en complete tuinaanleg in Wijngaarden, Molenlanden, Gorinchem, Dordrecht en Sliedrecht.",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

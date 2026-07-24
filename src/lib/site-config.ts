@@ -8,7 +8,7 @@
 
 export const company = {
   name: "Stolk Tuinprojecten",
-  owner: "Lucas Stolk",
+  owner: "Lucas",
   street: "Dorpsstraat 18",
   postalCode: "3366 BC",
   city: "Wijngaarden",

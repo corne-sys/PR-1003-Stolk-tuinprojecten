@@ -9,7 +9,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Kan ik terecht voor zowel tuinontwerp als aanleg?",
     answer:
-      "Ja. Stolk Tuinprojecten verzorgt zowel het ontwerp als de complete aanleg, met Lucas Stolk als vast aanspreekpunt door het hele traject.",
+      "Ja. Stolk Tuinprojecten verzorgt zowel het ontwerp als de complete aanleg, met Lucas als vast aanspreekpunt door het hele traject.",
   },
   {
     question: "Werkt Stolk Tuinprojecten voor particulieren en bedrijven?",
@@ -18,7 +18,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Kan ik direct telefonisch overleggen?",
     answer:
-      "Ja. Bel of app rechtstreeks met Lucas Stolk om uw tuinplannen te bespreken.",
+      "Ja. Bel of app rechtstreeks met Lucas om uw tuinplannen te bespreken.",
   },
   {
     question: "Worden ook kleine tuinen ontworpen en aangelegd?",
