@@ -36,6 +36,14 @@ yarn-error.log*
 # vercel
 .vercel
 
+# playwright-cli test artifacts
+.playwright-cli/
+
+# local AI-tool configuratie (skills/hooks) — geen projectcode
+.claude/
+.codex/
+.playwright/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

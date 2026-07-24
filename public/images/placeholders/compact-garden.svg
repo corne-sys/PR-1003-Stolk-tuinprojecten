@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="t">
+<title id="t">Illustratieve compositie van een compacte stadstuin — vervang door echte projectfoto</title>
+<rect width="1200" height="900" fill="#F7F2E9"/>
+<rect x="0" y="0" width="1200" height="520" fill="#F1EADA"/>
+<g stroke="#95A278" stroke-width="2" fill="none" opacity="0.6">
+  <line x1="60" y1="560" x2="60" y2="860"/>
+  <line x1="220" y1="560" x2="220" y2="860"/>
+  <line x1="380" y1="560" x2="380" y2="860"/>
+  <line x1="540" y1="560" x2="540" y2="860"/>
+  <line x1="700" y1="560" x2="700" y2="860"/>
+  <line x1="860" y1="560" x2="860" y2="860"/>
+  <line x1="1020" y1="560" x2="1020" y2="860"/>
+  <line x1="1140" y1="560" x2="1140" y2="860"/>
+</g>
+<rect x="0" y="540" width="1200" height="360" fill="none" stroke="#71805A" stroke-width="2" opacity="0.4"/>
+<path d="M120 540 C 160 440, 150 360, 190 280" stroke="#71805A" stroke-width="3" fill="none"/>
+<path d="M190 280 C 210 340, 235 360, 220 420" stroke="#71805A" stroke-width="3" fill="none"/>
+<path d="M190 280 C 170 340, 145 360, 160 420" stroke="#71805A" stroke-width="3" fill="none"/>
+<rect x="880" y="640" width="220" height="120" rx="4" fill="none" stroke="#1F3327" stroke-width="2" opacity="0.55"/>
+<circle cx="900" cy="800" r="26" fill="none" stroke="#1F3327" stroke-width="2" opacity="0.55"/>
+<circle cx="1080" cy="800" r="26" fill="none" stroke="#1F3327" stroke-width="2" opacity="0.55"/>
+</svg>

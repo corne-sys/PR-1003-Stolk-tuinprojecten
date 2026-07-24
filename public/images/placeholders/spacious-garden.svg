@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="t">
+<title id="t">Illustratieve compositie van een ruime landelijke tuin — vervang door echte projectfoto</title>
+<rect width="1200" height="900" fill="#1F3327"/>
+<path d="M0 560 C 260 500, 540 600, 820 540 C 980 500, 1100 560, 1200 520 L1200 900 L0 900 Z" fill="#152219"/>
+<g stroke="#95A278" stroke-width="3" fill="none" opacity="0.75">
+  <path d="M260 700 C 300 580, 270 500, 320 400"/>
+  <path d="M320 400 C 345 460, 375 480, 355 540"/>
+  <path d="M320 400 C 295 460, 270 480, 285 540"/>
+</g>
+<g stroke="#71805A" stroke-width="3" fill="none" opacity="0.65">
+  <path d="M880 720 C 910 600, 940 540, 920 440"/>
+  <path d="M920 440 C 940 490, 965 510, 950 570"/>
+  <path d="M920 440 C 900 490, 875 510, 890 570"/>
+</g>
+<path d="M0 640 C 320 600, 640 680, 960 630 C 1060 615, 1140 640, 1200 625" stroke="#E4D7BD" stroke-width="2" fill="none" opacity="0.35"/>
+<rect x="70" y="70" width="120" height="1" fill="none"/>
+<circle cx="1080" cy="180" r="90" fill="none" stroke="#E4D7BD" stroke-width="2" opacity="0.3"/>
+</svg>

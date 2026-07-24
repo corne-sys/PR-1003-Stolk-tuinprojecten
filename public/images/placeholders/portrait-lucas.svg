@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" width="960" height="1200" role="img" aria-labelledby="t">
+<title id="t">Portretplaceholder Lucas Stolk — vervang door een echte portretfoto</title>
+<rect width="960" height="1200" fill="#1F3327"/>
+<circle cx="480" cy="430" r="150" fill="none" stroke="#E4D7BD" stroke-width="2.5" opacity="0.55"/>
+<path d="M270 900 C 270 700, 380 620, 480 620 C 580 620, 690 700, 690 900" fill="none" stroke="#E4D7BD" stroke-width="2.5" opacity="0.55"/>
+<path d="M120 1200 C 160 1000, 320 950, 480 950 C 640 950, 800 1000, 840 1200" fill="none" stroke="#95A278" stroke-width="2" opacity="0.4"/>
+</svg>

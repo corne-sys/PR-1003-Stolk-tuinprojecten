@@ -1,26 +1,183 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-forest-deep: #1f3327;
+  --color-forest-ink: #152219;
+  --color-moss: #71805a;
+  --color-moss-soft: #95a278;
+  --color-linen: #f7f2e9;
+  --color-linen-warm: #f1eada;
+  --color-sand: #e4d7bd;
+  --color-charcoal: #211e1b;
+  --color-terracotta: #b25e3e;
+  --color-terracotta-deep: #9c4e31;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-forest-deep: var(--color-forest-deep);
+  --color-forest-ink: var(--color-forest-ink);
+  --color-moss: var(--color-moss);
+  --color-moss-soft: var(--color-moss-soft);
+  --color-linen: var(--color-linen);
+  --color-linen-warm: var(--color-linen-warm);
+  --color-sand: var(--color-sand);
+  --color-charcoal: var(--color-charcoal);
+  --color-terracotta: var(--color-terracotta);
+  --color-terracotta-deep: var(--color-terracotta-deep);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-petrona);
+  --font-sans: var(--font-work-sans);
+
+  --shadow-image-frame: 0 18px 40px -20px rgba(21, 34, 25, 0.35);
+  --shadow-sticky-bar: 0 -6px 20px -8px rgba(21, 34, 25, 0.25);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-linen);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.leaf-path-clip {
+  clip-path: polygon(
+    0% 7%,
+    7% 0%,
+    100% 0%,
+    100% 93%,
+    93% 100%,
+    0% 100%
+  );
+}
+
+@media (max-width: 640px) {
+  .leaf-path-clip {
+    clip-path: none;
+  }
+}
+
+.leaf-sweep-scene .leaf {
+  transform: translate(0, 0) rotate(0deg);
+}
+
+.leaf-sweep-scene.is-sweeping .leaf {
+  animation-name: leaf-sweep;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: forwards;
+}
+
+.leaf-sweep-scene .broom-arm {
+  transform-origin: 46% 68%;
+}
+
+.leaf-sweep-scene.is-sweeping .broom-arm {
+  animation: broom-swing 3.4s cubic-bezier(0.45, 0, 0.55, 1) 1;
+  animation-fill-mode: forwards;
+}
+
+.leaf-sweep-scene.is-sweeping .sweeper-figure {
+  animation: sweeper-rock 3.4s ease-in-out 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes leaf-sweep {
+  to {
+    transform: translate(var(--dx), var(--dy)) rotate(var(--rot)) scale(var(--scale, 1));
+  }
+}
+
+/* Drie zichtbare veegslagen, elk met een duidelijk contactmoment (-38deg)
+   gevolgd door een ruime terughaal (18deg) — grotere uitslag dan voorheen
+   zodat de zwaai zelf onmiskenbaar leesbaar is. */
+@keyframes broom-swing {
+  0% {
+    transform: rotate(18deg);
+  }
+  13% {
+    transform: rotate(-38deg);
+  }
+  26% {
+    transform: rotate(18deg);
+  }
+  42% {
+    transform: rotate(-38deg);
+  }
+  55% {
+    transform: rotate(18deg);
+  }
+  71% {
+    transform: rotate(-38deg);
+  }
+  85% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.leaf-sweep-scene .sweep-arc {
+  opacity: 0;
+}
+
+.leaf-sweep-scene.is-sweeping .sweep-arc {
+  animation: sweep-arc-flash 3.4s ease-out 1;
+}
+
+@keyframes sweep-arc-flash {
+  0%, 100% {
+    opacity: 0;
+  }
+  8%, 13%, 18% {
+    opacity: 0.5;
+  }
+  37%, 42%, 47% {
+    opacity: 0.5;
+  }
+  66%, 71%, 76% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes sweeper-rock {
+  0% {
+    transform: translateX(0);
+  }
+  13% {
+    transform: translateX(-7px);
+  }
+  26% {
+    transform: translateX(1px);
+  }
+  42% {
+    transform: translateX(-7px);
+  }
+  55% {
+    transform: translateX(1px);
+  }
+  71% {
+    transform: translateX(-7px);
+  }
+  85% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

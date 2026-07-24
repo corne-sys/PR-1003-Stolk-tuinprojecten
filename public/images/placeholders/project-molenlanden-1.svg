@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="t">
+<title id="t">Illustratieve compositie — landelijke tuin Molenlanden, aanzicht 1 — vervang door echte projectfoto</title>
+<rect width="1200" height="900" fill="#F1EADA"/>
+<path d="M0 600 C 300 560,600 640,900 590 C 1000 575,1100 600,1200 585 L1200 900 L0 900 Z" fill="#1F3327"/>
+<g stroke="#95A278" stroke-width="3" fill="none" opacity="0.8">
+  <path d="M240 640 C 270 540,250 470,290 380"/>
+  <path d="M290 380 C 310 430,335 450,320 500"/>
+  <path d="M290 380 C 270 430,245 450,260 500"/>
+</g>
+<g stroke="#71805A" stroke-width="3" fill="none" opacity="0.7">
+  <path d="M760 660 C 790 560,770 490,810 400"/>
+  <path d="M810 400 C 830 450,855 470,840 520"/>
+  <path d="M810 400 C 790 450,765 470,780 520"/>
+</g>
+<path d="M0 700 C 320 660,640 730,960 690 C 1040 680,1120 695,1200 685" stroke="#E4D7BD" stroke-width="2" fill="none" opacity="0.4"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="t">
+<title id="t">Illustratieve compositie — moderne gezinstuin regio Dordrecht, aanzicht 1 — vervang door echte projectfoto</title>
+<rect width="1200" height="900" fill="#1F3327"/>
+<g stroke="#E4D7BD" stroke-width="2" opacity="0.3">
+  <line x1="0" y1="480" x2="1200" y2="480"/>
+  <line x1="0" y1="540" x2="1200" y2="540"/>
+  <line x1="0" y1="600" x2="1200" y2="600"/>
+</g>
+<rect x="140" y="620" width="920" height="200" fill="none" stroke="#95A278" stroke-width="2" opacity="0.5"/>
+<g stroke="#71805A" stroke-width="3" fill="none" opacity="0.7">
+  <path d="M980 720 C 1000 640,985 580,1015 510"/>
+  <path d="M1015 510 C 1030 550,1050 565,1038 605"/>
+  <path d="M1015 510 C 1000 550,980 565,992 605"/>
+</g>
+</svg>
