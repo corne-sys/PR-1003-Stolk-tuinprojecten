@@ -138,7 +138,7 @@ export default function ReviewsPage() {
                     })}
                   </span>
                 </div>
-                <p className="mt-5 font-sans text-[0.98rem] leading-relaxed text-charcoal/90 italic">
+                <p className="mt-5 font-sans text-[1.0625rem] leading-relaxed text-charcoal/90 italic">
                   &ldquo;{review.text}&rdquo;
                 </p>
               </div>
