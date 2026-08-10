@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { company, primaryNav, telHref, whatsappHref, workingAreas } from "@/lib/site-config";
+import { company, primaryNav, telHref, workingAreas } from "@/lib/site-config";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -22,7 +22,6 @@ export function Footer() {
           </h2>
           <ul className="mt-4 flex flex-col gap-2 font-sans text-sm text-linen/85">
             <li>{company.name}</li>
-            <li>{company.owner}</li>
             <li>{company.street}</li>
             <li>
               {company.postalCode} {company.city}
@@ -30,17 +29,6 @@ export function Footer() {
             <li>
               <a href={telHref(company.phone)} data-event="phone_click" className="hover:text-linen">
                 {company.phone}
-              </a>
-            </li>
-            <li>
-              <a
-                href={whatsappHref(company.whatsapp)}
-                data-event="whatsapp_click"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-linen"
-              >
-                WhatsApp: {company.whatsapp}
               </a>
             </li>
             <li>
