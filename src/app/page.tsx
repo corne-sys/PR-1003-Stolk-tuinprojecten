@@ -278,7 +278,7 @@ export default function HomePage() {
           projectomschrijvingen vóór livegang.
         </p>
         <div className="mt-8 grid gap-8 lg:grid-cols-3">
-          {projects.slice(0, 3).map((project) => (
+          {projects.map((project) => (
             <Link
               key={project.slug}
               href={`/projecten/${project.slug}`}
