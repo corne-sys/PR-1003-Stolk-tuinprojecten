@@ -281,7 +281,7 @@ export default function HomePage() {
           {projects.map((project) => (
             <Link
               key={project.slug}
-              href={`/projecten/${project.slug}`}
+              href="/projecten"
               className="group block"
             >
               <PlaceholderImage
