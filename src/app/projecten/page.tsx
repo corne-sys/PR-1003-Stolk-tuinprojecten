@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Section } from "@/components/Section";
 import { JsonLd } from "@/components/JsonLd";
-import { company, projects } from "@/lib/site-config";
+import { company, projects, projectThumbnails } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Projecten | Tuinontwerp & Tuinaanleg in de Regio",
@@ -15,15 +15,6 @@ export const metadata: Metadata = {
     description: "Tuinontwerp en tuinaanleg in de regio Wijngaarden.",
     url: "/projecten",
   },
-};
-
-const projectImages: Record<string, string> = {
-  "project-1": "project-1-01.jpeg",
-  "project-2": "project-2-01.jpeg",
-  "project-3": "project-3-01.jpeg",
-  "project-4": "project-4-01.jpeg",
-  "project-5": "project-5-01.jpeg",
-  "project-6": "project-6-07.jpeg",
 };
 
 export default function ProjectenPage() {
@@ -59,10 +50,10 @@ export default function ProjectenPage() {
           {projects.map((project) => (
             <Link key={project.slug} href={`/projecten/${project.slug}`} className="group block">
               <PlaceholderImage
-                src={projectImages[project.slug] ?? "hero.svg"}
+                src={projectThumbnails[project.slug] ?? "hero.svg"}
                 alt={project.images[0]?.alt ?? project.title}
                 aspect="4/3"
-                photo={!!projectImages[project.slug]}
+                photo={!!projectThumbnails[project.slug]}
               />
               <p className="mt-4 font-sans text-xs font-medium uppercase tracking-[0.1em] text-moss">
                 {project.region} · {project.gardenType}

@@ -82,6 +82,16 @@ export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);
 }
 
+/** Thumbnail-foto per project, gebruikt op de projectenoverzichtpagina en homepage. */
+export const projectThumbnails: Record<string, string> = {
+  "project-1": "project-1-01.jpeg",
+  "project-2": "project-2-01.jpeg",
+  "project-3": "project-3-01.jpeg",
+  "project-4": "project-4-01.jpeg",
+  "project-5": "project-5-01.jpeg",
+  "project-6": "project-6-07.jpeg",
+};
+
 export type Review = {
   id: string;
   author: string;

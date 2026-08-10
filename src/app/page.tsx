@@ -6,7 +6,7 @@ import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Section } from "@/components/Section";
 import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
-import { company, projects, workingAreas } from "@/lib/site-config";
+import { company, projects, projectThumbnails, workingAreas } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Hovenier Wijngaarden | Tuinontwerp & Tuinaanleg | Stolk",
@@ -274,27 +274,21 @@ export default function HomePage() {
           </Link>
         </div>
         <p className="mt-3 max-w-[60ch] font-sans text-sm text-charcoal/60">
-          Ter voorbereiding getoonde placeholders — vervang titels, tekst en
-          foto&apos;s door echte projecten vóór livegang.
+          Ter voorbereiding getoonde titels — vervang door echte
+          projectomschrijvingen vóór livegang.
         </p>
         <div className="mt-8 grid gap-8 lg:grid-cols-3">
-          {projects.map((project, i) => (
+          {projects.slice(0, 3).map((project) => (
             <Link
               key={project.slug}
               href={`/projecten/${project.slug}`}
               className="group block"
             >
               <PlaceholderImage
-                src={
-                  i === 0
-                    ? "project-molenlanden-1.jpg"
-                    : i === 1
-                      ? "project-dordrecht-1.jpg"
-                      : "project-gorinchem-1.jpg"
-                }
+                src={projectThumbnails[project.slug] ?? "hero.svg"}
                 alt={project.images[0]?.alt ?? project.title}
                 aspect="4/3"
-                photo
+                photo={!!projectThumbnails[project.slug]}
               />
               <p className="mt-4 font-sans text-xs font-medium uppercase tracking-[0.1em] text-moss">
                 {project.region}
