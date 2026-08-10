@@ -48,6 +48,7 @@ export function Footer() {
                 {company.email}
               </a>
             </li>
+            <li>KVK: {company.kvk}</li>
           </ul>
         </div>
 

@@ -15,6 +15,7 @@ export const company = {
   phone: "06-22100220",
   whatsapp: "06-22100220",
   email: "info@stolktuinprojecten.nl",
+  kvk: "42054837",
   // Basis voor canonical/OG-urls. Overschrijf via NEXT_PUBLIC_SITE_URL zodra
   // het definitieve domein bekend is.
   siteUrl:
