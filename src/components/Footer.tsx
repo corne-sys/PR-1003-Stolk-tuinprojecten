@@ -73,13 +73,10 @@ export function Footer() {
       </div>
 
       <div className="border-t border-linen/10">
-        <div className="mx-auto flex max-w-[1280px] flex-col-reverse items-center gap-3 px-5 py-6 font-sans text-xs text-linen/60 sm:flex-row sm:justify-between sm:px-8">
+        <div className="mx-auto max-w-[1280px] px-5 py-6 font-sans text-xs text-linen/60 sm:px-8">
           <p>
             © {year} {company.name}
           </p>
-          <Link href="/privacyverklaring" className="hover:text-linen">
-            Privacyverklaring
-          </Link>
         </div>
       </div>
     </footer>

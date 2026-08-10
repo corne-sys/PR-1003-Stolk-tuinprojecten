@@ -8,9 +8,21 @@ import { JsonLd } from "@/components/JsonLd";
 import { company, getProjectBySlug, projects } from "@/lib/site-config";
 
 const projectImageFiles: Record<string, string[]> = {
-  "landelijke-tuin-molenlanden": ["project-molenlanden-1.jpg"],
-  "moderne-gezinstuin-dordrecht": ["project-dordrecht-1.jpg"],
-  "compacte-tuin-gorinchem": ["project-gorinchem-1.jpg"],
+  "project-1": ["project-1-01.jpeg", "project-1-02.jpeg"],
+  "project-2": ["project-2-01.jpeg", "project-2-02.jpeg", "project-2-03.jpeg", "project-2-04.jpeg"],
+  "project-3": ["project-3-01.jpeg", "project-3-02.jpeg"],
+  "project-4": ["project-4-01.jpeg", "project-4-02.jpeg", "project-4-03.jpeg", "project-4-04.jpeg"],
+  "project-5": ["project-5-01.jpeg", "project-5-02.jpeg"],
+  "project-6": [
+    "project-6-07.jpeg",
+    "project-6-01.jpeg",
+    "project-6-02.jpeg",
+    "project-6-03.jpeg",
+    "project-6-04.jpeg",
+    "project-6-05.jpeg",
+    "project-6-06.jpeg",
+    "project-6-08.jpeg",
+  ],
 };
 
 export function generateStaticParams() {
@@ -85,19 +97,21 @@ export default async function ProjectDetailPage({
         </p>
       </Section>
 
-      <Section tone="linen" className="!pt-0">
-        <div className="border-t border-sand pt-12">
-          {images.map((src, i) => (
-            <PlaceholderImage
-              key={src}
-              src={src}
-              alt={project.images[i]?.alt ?? project.title}
-              aspect="16/9"
-              photo
-            />
-          ))}
-        </div>
-      </Section>
+      {images.length > 0 && (
+        <Section tone="linen" className="!pt-0">
+          <div className="grid gap-8 border-t border-sand pt-12 sm:grid-cols-2">
+            {images.map((src, i) => (
+              <PlaceholderImage
+                key={src}
+                src={src}
+                alt={project.images[i]?.alt ?? project.title}
+                aspect="16/9"
+                photo
+              />
+            ))}
+          </div>
+        </Section>
+      )}
 
       {(project.challenge || project.approach) && (
         <Section tone="forest">

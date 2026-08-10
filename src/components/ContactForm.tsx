@@ -2,7 +2,6 @@
 
 import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
-import Link from "next/link";
 import { submitContactForm, type ContactFormState } from "@/lib/actions/contact";
 
 const initialState: ContactFormState = { status: "idle" };
@@ -115,29 +114,6 @@ export function ContactForm() {
           </p>
         )}
       </div>
-
-      <div className="flex items-start gap-3">
-        <input
-          type="checkbox"
-          id="consent"
-          name="consent"
-          required
-          aria-describedby={state.fieldErrors?.consent ? "consent-error" : undefined}
-          className="mt-1 h-4 w-4 shrink-0 rounded-[4px] border-sand text-forest-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
-        />
-        <label htmlFor="consent" className="font-sans text-sm leading-relaxed text-charcoal/80">
-          Ik ga akkoord met de{" "}
-          <Link href="/privacyverklaring" className="underline decoration-moss underline-offset-2">
-            privacyverklaring
-          </Link>{" "}
-          en geef toestemming om mijn gegevens te gebruiken om contact met mij op te nemen.
-        </label>
-      </div>
-      {state.fieldErrors?.consent && (
-        <p id="consent-error" role="alert" className="-mt-3 font-sans text-sm text-[#8C4A30]">
-          {state.fieldErrors.consent}
-        </p>
-      )}
 
       <SubmitButton />
     </form>

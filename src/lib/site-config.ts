@@ -56,62 +56,27 @@ export type Project = {
 };
 
 /**
- * TIJDELIJKE PROJECTEN — placeholders ter voorbereiding van de structuur.
- * Vervang titels, teksten en afbeeldingen door echte projecten vóór
- * livegang. Verzin geen klantnamen, resultaten of jaartallen.
+ * PROJECTEN — gevuld vanuit de aangeleverde projectmappen (Fotos/Project1
+ * t/m Project6). Titels/teksten zijn nog generiek; vervang door definitieve
+ * projectomschrijvingen zodra bekend. Verzin geen klantnamen, resultaten of
+ * jaartallen.
  */
-export const projects: Project[] = [
-  {
-    slug: "landelijke-tuin-molenlanden",
-    title: "Landelijke tuin in Molenlanden",
-    region: "Molenlanden",
-    gardenType: "Landelijke tuin",
-    description:
-      "Een ruime, landelijke tuin met aandacht voor natuurlijke beplanting en een rustige indeling die aansluit bij het open polderlandschap.",
-    services: ["Tuinontwerp", "Grondwerk", "Beplanting", "Bestrating"],
-    images: [
-      { alt: "Landelijke tuin met natuurlijke beplanting in Molenlanden", placeholderLabel: "Projectfoto 1 — vervangen" },
-      { alt: "Terras en border in een landelijke tuin", placeholderLabel: "Projectfoto 2 — vervangen" },
-    ],
-    challenge:
-      "Voorbeeldrichting: een open, winderige polderkavel vroeg om beschutting zonder het landschapszicht weg te nemen.",
-    approach:
-      "Voorbeeldrichting: beplanting en erfafscheiding zijn zo gekozen dat ze beschutting bieden en toch bij het landschap passen.",
-  },
-  {
-    slug: "moderne-gezinstuin-dordrecht",
-    title: "Moderne gezinstuin regio Dordrecht",
-    region: "Regio Dordrecht",
-    gardenType: "Moderne gezinstuin",
-    description:
-      "Een strakke, moderne tuin voor een gezin, met een heldere indeling tussen terras, gazon en beplanting voor dagelijks gebruik.",
-    services: ["Tuinontwerp", "Bestrating", "Gazon", "Beplanting"],
-    images: [
-      { alt: "Moderne gezinstuin met strak terras in regio Dordrecht", placeholderLabel: "Projectfoto 1 — vervangen" },
-      { alt: "Gazon en beplanting in een moderne gezinstuin", placeholderLabel: "Projectfoto 2 — vervangen" },
-    ],
-    challenge:
-      "Voorbeeldrichting: een compacte kavel moest zowel speelruimte als een representatief terras bieden.",
-    approach:
-      "Voorbeeldrichting: een heldere zonering verdeelt de tuin in vaste gebruiksplekken zonder het geheel klein te laten aanvoelen.",
-  },
-  {
-    slug: "compacte-tuin-gorinchem",
-    title: "Compacte tuin regio Gorinchem",
-    region: "Regio Gorinchem",
-    gardenType: "Compacte stadstuin",
-    description:
-      "Een kleine, goed doordachte tuin waarin elk vierkante meter is benut zonder dat de ruimte vol aanvoelt.",
-    services: ["Tuinontwerp", "Bestrating", "Beplanting"],
-    images: [
-      { alt: "Compacte stadstuin met doordachte indeling in regio Gorinchem", placeholderLabel: "Projectfoto 1 — vervangen" },
-    ],
-    challenge:
-      "Voorbeeldrichting: een kleine oppervlakte vroeg om een indeling die ruimtelijk aanvoelt.",
-    approach:
-      "Voorbeeldrichting: diagonale bestrating en verticale beplanting vergroten de beleving van de ruimte.",
-  },
-];
+export const projects: Project[] = Array.from({ length: 6 }, (_, i) => {
+  const n = i + 1;
+  const photoCount: Record<number, number> = { 1: 2, 2: 4, 3: 2, 4: 4, 5: 2, 6: 8 };
+  return {
+    slug: `project-${n}`,
+    title: `Project ${n}`,
+    region: "Wijngaarden en omgeving",
+    gardenType: "Tuinproject",
+    description: "Foto's van dit tuinproject van Stolk Tuinprojecten.",
+    services: [],
+    images: Array.from({ length: photoCount[n] }, (_, j) => ({
+      alt: `Foto ${j + 1} van project ${n}`,
+      placeholderLabel: `Projectfoto ${j + 1}`,
+    })),
+  };
+});
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);

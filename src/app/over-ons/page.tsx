@@ -35,16 +35,6 @@ const steps = [
   { title: "Oplevering", text: "Een nette overdracht van de afgeronde tuin." },
 ];
 
-const values = [
-  { title: "Aandacht voor de plek", text: "Elk ontwerp begint bij de tuin en de omgeving zelf." },
-  { title: "Heldere afspraken", text: "U weet vooraf waar u aan toe bent, ook over de planning." },
-  {
-    title: "Vakwerk van ontwerp tot oplevering",
-    text: "Dezelfde hovenier begeleidt het hele traject.",
-  },
-  { title: "Bereikbaar en persoonlijk", text: "Rechtstreeks contact, zonder tussenpersonen." },
-];
-
 export default function OverOnsPage() {
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -128,23 +118,6 @@ export default function OverOnsPage() {
             </li>
           ))}
         </ol>
-      </Section>
-
-      {/* 4. Waarden */}
-      <Section tone="linen">
-        <h2 className="max-w-[24ch] text-[clamp(1.75rem,3.2vw,2.75rem)] font-medium leading-[1.1] text-forest-deep">
-          Waarden
-        </h2>
-        <ul className="mt-10 grid gap-x-16 gap-y-10 sm:grid-cols-2">
-          {values.map((value) => (
-            <li key={value.title} className="border-t border-sand pt-6">
-              <p className="font-display text-xl font-medium text-forest-deep">{value.title}</p>
-              <p className="mt-2 max-w-[38ch] font-sans text-sm leading-relaxed text-charcoal/75">
-                {value.text}
-              </p>
-            </li>
-          ))}
-        </ul>
       </Section>
 
       {/* 5. Werkgebied */}

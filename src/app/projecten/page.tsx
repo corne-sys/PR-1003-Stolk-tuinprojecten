@@ -18,9 +18,12 @@ export const metadata: Metadata = {
 };
 
 const projectImages: Record<string, string> = {
-  "landelijke-tuin-molenlanden": "project-molenlanden-1.jpg",
-  "moderne-gezinstuin-dordrecht": "project-dordrecht-1.jpg",
-  "compacte-tuin-gorinchem": "project-gorinchem-1.jpg",
+  "project-1": "project-1-01.jpeg",
+  "project-2": "project-2-01.jpeg",
+  "project-3": "project-3-01.jpeg",
+  "project-4": "project-4-01.jpeg",
+  "project-5": "project-5-01.jpeg",
+  "project-6": "project-6-07.jpeg",
 };
 
 export default function ProjectenPage() {

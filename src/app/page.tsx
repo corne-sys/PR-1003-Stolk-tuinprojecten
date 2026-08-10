@@ -109,7 +109,7 @@ export default function HomePage() {
               Hovenier vanuit Wijngaarden
             </p>
             <h1 className="mt-4 max-w-[16ch] text-[clamp(2.75rem,6vw,5rem)] font-medium leading-[1.02] tracking-[-0.01em] text-forest-deep">
-              Doordachte tuinen, vakkundig aangelegd
+              Mooie tuinen, vakkundig aangelegd
             </h1>
             <p className="mt-6 max-w-[52ch] font-sans text-[1.0625rem] leading-relaxed text-charcoal/85">
               Stolk Tuinprojecten ontwerpt en realiseert landelijke en moderne tuinen
@@ -127,7 +127,7 @@ export default function HomePage() {
             {/* Foto aangeleverd door klant. */}
             <div className="shadow-image-frame relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
               <Image
-                src="/images/photos/hero-garden.png"
+                src="/images/photos/hero-garden.jpg"
                 alt="Verzorgde tuin met gazon, border en zitje onder bomen"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
