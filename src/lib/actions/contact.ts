@@ -10,11 +10,12 @@ const contactSchema = z.object({
     .min(6, "Vul een geldig telefoonnummer in.")
     .regex(/^[\d\s+()-]{6,}$/, "Vul een geldig telefoonnummer in."),
   email: z.string().trim().email("Vul een geldig e-mailadres in."),
+  notities: z.string().trim().max(2000, "Maximaal 2000 tekens.").optional(),
 });
 
 export type ContactFormState = {
   status: "idle" | "success" | "error";
-  fieldErrors?: Partial<Record<"naam" | "telefoon" | "email", string>>;
+  fieldErrors?: Partial<Record<"naam" | "telefoon" | "email" | "notities", string>>;
   formError?: string;
 };
 
@@ -33,6 +34,7 @@ export async function submitContactForm(
     naam: formData.get("naam"),
     telefoon: formData.get("telefoon"),
     email: formData.get("email"),
+    notities: formData.get("notities"),
   });
 
   if (!result.success) {

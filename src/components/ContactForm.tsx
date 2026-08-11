@@ -115,6 +115,25 @@ export function ContactForm() {
         )}
       </div>
 
+      <div>
+        <label htmlFor="notities" className="font-sans text-sm font-medium text-charcoal">
+          Notities
+        </label>
+        <textarea
+          id="notities"
+          name="notities"
+          rows={4}
+          aria-invalid={state.status === "error" && !!state.fieldErrors?.notities}
+          aria-describedby={state.fieldErrors?.notities ? "notities-error" : undefined}
+          className="mt-2 w-full resize-y rounded-[6px] border border-sand bg-linen-warm px-4 py-3 font-sans text-[1.0625rem] text-charcoal outline-none focus:border-forest-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
+        />
+        {state.fieldErrors?.notities && (
+          <p id="notities-error" role="alert" className="mt-1.5 font-sans text-sm text-[#8C4A30]">
+            {state.fieldErrors.notities}
+          </p>
+        )}
+      </div>
+
       <SubmitButton />
     </form>
   );
