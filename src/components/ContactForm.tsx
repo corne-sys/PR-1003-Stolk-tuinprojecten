@@ -117,7 +117,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="notities" className="font-sans text-sm font-medium text-charcoal">
-          Notities
+          Bericht
         </label>
         <textarea
           id="notities"
