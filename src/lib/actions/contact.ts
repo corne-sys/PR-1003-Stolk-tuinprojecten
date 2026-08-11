@@ -44,11 +44,29 @@ export async function submitContactForm(
     return { status: "error", fieldErrors };
   }
 
-  // TODO vóór livegang: koppel hier een echte bezorgroute (bijv. Resend,
-  // een SMTP-provider, of een CRM-webhook) om `result.data` daadwerkelijk
-  // bij Lucas te bezorgen. Er wordt bewust niets gelogd — `result.data`
-  // bevat persoonsgegevens (naam, telefoon, e-mail).
-  // await sendContactNotification(result.data);
+  const endpoint = process.env.FORMSPREE_ENDPOINT;
+  if (!endpoint) {
+    return {
+      status: "error",
+      formError: "Verzenden is momenteel niet mogelijk. Probeer het later opnieuw.",
+    };
+  }
+
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(result.data),
+  });
+
+  if (!response.ok) {
+    return {
+      status: "error",
+      formError: "Er ging iets mis bij het verzenden. Probeer het later opnieuw.",
+    };
+  }
 
   return { status: "success" };
 }
