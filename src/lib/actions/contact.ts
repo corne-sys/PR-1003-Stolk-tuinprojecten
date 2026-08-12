@@ -2,6 +2,8 @@
 
 import { z } from "zod";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mwleowjj";
+
 const contactSchema = z.object({
   naam: z.string().trim().min(2, "Vul uw naam in."),
   telefoon: z
@@ -46,15 +48,7 @@ export async function submitContactForm(
     return { status: "error", fieldErrors };
   }
 
-  const endpoint = process.env.FORMSPREE_ENDPOINT;
-  if (!endpoint) {
-    return {
-      status: "error",
-      formError: "Verzenden is momenteel niet mogelijk. Probeer het later opnieuw.",
-    };
-  }
-
-  const response = await fetch(endpoint, {
+  const response = await fetch(FORMSPREE_ENDPOINT, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
