@@ -7,13 +7,28 @@ export function Footer() {
 
   return (
     <footer className="bg-forest-ink text-linen">
-      <div className="mx-auto grid max-w-[1280px] gap-10 px-5 py-16 sm:px-8 md:grid-cols-[1.2fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-[1280px] gap-10 px-5 py-16 sm:px-8 sm:grid-cols-2 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
         <div>
           <Logo tone="light" />
           <p className="mt-5 max-w-[32ch] font-sans text-sm leading-relaxed text-linen/75">
             Tuinontwerp en complete tuinaanleg door {company.owner}, werkzaam vanuit{" "}
             {company.city}.
           </p>
+        </div>
+
+        <div>
+          <h2 className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-linen/60">
+            Navigatie
+          </h2>
+          <ul className="mt-4 flex flex-col gap-2 font-sans text-sm text-linen/85">
+            {primaryNav.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="hover:text-linen">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div>
@@ -45,19 +60,6 @@ export function Footer() {
             Werkgebied
           </h2>
           <p className="mt-4 font-sans text-sm text-linen/85">{workingAreas.join(" · ")}</p>
-
-          <h2 className="mt-8 font-sans text-xs font-medium uppercase tracking-[0.12em] text-linen/60">
-            Navigatie
-          </h2>
-          <ul className="mt-4 flex flex-col gap-2 font-sans text-sm text-linen/85">
-            {primaryNav.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="hover:text-linen">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
 
