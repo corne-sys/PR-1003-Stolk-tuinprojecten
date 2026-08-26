@@ -63,7 +63,7 @@ export type Project = {
  * jaartallen.
  */
 export const projects: Project[] = [1, 2, 3, 4].map((n) => {
-  const photoCount: Record<number, number> = { 1: 4, 2: 1, 3: 4, 4: 8 };
+  const photoCount: Record<number, number> = { 1: 4, 2: 2, 3: 4, 4: 8 };
   return {
     slug: `project-${n}`,
     title: `Project ${n}`,
@@ -85,7 +85,7 @@ export function getProjectBySlug(slug: string): Project | undefined {
 /** Thumbnail-foto per project, gebruikt op de projectenoverzichtpagina en homepage. */
 export const projectThumbnails: Record<string, string> = {
   "project-1": "project-2-01.jpeg",
-  "project-2": "project-2-02.jpeg",
+  "project-2": "project-2-01.jpeg",
   "project-3": "project-3-01.jpeg",
   "project-4": "project-4-07.jpeg",
 };
