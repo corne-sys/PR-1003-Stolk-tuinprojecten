@@ -8,20 +8,18 @@ import { JsonLd } from "@/components/JsonLd";
 import { company, getProjectBySlug, projects } from "@/lib/site-config";
 
 const projectImageFiles: Record<string, string[]> = {
-  "project-1": ["project-1-01.jpeg", "project-1-02.jpeg"],
-  "project-2": ["project-2-01.jpeg", "project-2-02.jpeg", "project-2-03.jpeg", "project-2-04.jpeg"],
-  "project-3": ["project-3-01.jpeg", "project-3-02.jpeg"],
-  "project-4": ["project-4-01.jpeg", "project-4-02.jpeg", "project-4-03.jpeg", "project-4-04.jpeg"],
-  "project-5": ["project-5-01.jpeg", "project-5-02.jpeg"],
-  "project-6": [
-    "project-6-07.jpeg",
-    "project-6-01.jpeg",
-    "project-6-02.jpeg",
-    "project-6-03.jpeg",
-    "project-6-04.jpeg",
-    "project-6-05.jpeg",
-    "project-6-06.jpeg",
-    "project-6-08.jpeg",
+  "project-1": ["project-1-01.jpeg", "project-1-02.jpeg", "project-1-03.jpeg", "project-1-04.jpeg"],
+  "project-2": ["project-2-01.jpeg", "project-2-02.jpeg"],
+  "project-3": ["project-3-01.jpeg", "project-3-02.jpeg", "project-3-03.jpeg", "project-3-04.jpeg"],
+  "project-4": [
+    "project-4-07.jpeg",
+    "project-4-01.jpeg",
+    "project-4-02.jpeg",
+    "project-4-03.jpeg",
+    "project-4-04.jpeg",
+    "project-4-05.jpeg",
+    "project-4-06.jpeg",
+    "project-4-08.jpeg",
   ],
 };
 
@@ -140,21 +138,23 @@ export default async function ProjectDetailPage({
         </Section>
       )}
 
-      <Section tone="linen">
-        <h2 className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-moss">
-          Diensten bij dit project
-        </h2>
-        <ul className="mt-4 flex flex-wrap gap-3">
-          {project.services.map((service) => (
-            <li
-              key={service}
-              className="rounded-[6px] border border-sand bg-linen-warm px-4 py-2 font-sans text-sm text-charcoal/80"
-            >
-              {service}
-            </li>
-          ))}
-        </ul>
-      </Section>
+      {project.services.length > 0 && (
+        <Section tone="linen">
+          <h2 className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-moss">
+            Diensten bij dit project
+          </h2>
+          <ul className="mt-4 flex flex-wrap gap-3">
+            {project.services.map((service) => (
+              <li
+                key={service}
+                className="rounded-[6px] border border-sand bg-linen-warm px-4 py-2 font-sans text-sm text-charcoal/80"
+              >
+                {service}
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
 
       <Section tone="forest">
         <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-center lg:justify-between">

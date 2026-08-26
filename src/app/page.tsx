@@ -207,7 +207,7 @@ export default function HomePage() {
         <div className="mt-10 grid gap-6 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <PlaceholderImage
-              src="compact-garden.png"
+              src="compact-garden.jpg"
               alt="Compacte stadstuin met doordachte indeling"
               aspect="3/2"
               photo
@@ -216,7 +216,7 @@ export default function HomePage() {
           </div>
           <div className="lg:col-span-5">
             <PlaceholderImage
-              src="spacious-garden.png"
+              src="spacious-garden.jpg"
               alt="Ruime landelijke tuin met natuurlijke beplanting"
               aspect="4/3"
               photo
@@ -225,7 +225,7 @@ export default function HomePage() {
           </div>
           <div className="lg:col-span-3">
             <PlaceholderImage
-              src="business-garden.png"
+              src="business-garden.jpg"
               alt="Zakelijke buitenruimte met representatief terras"
               aspect="3/2"
               photo

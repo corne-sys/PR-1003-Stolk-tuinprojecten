@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
 import { Section } from "@/components/Section";
 import { JsonLd } from "@/components/JsonLd";
@@ -41,6 +42,8 @@ function StarRating({ rating = 5 }: { rating?: number }) {
 }
 
 export default function ReviewsPage() {
+  if (!hasPublishedReviews) notFound();
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

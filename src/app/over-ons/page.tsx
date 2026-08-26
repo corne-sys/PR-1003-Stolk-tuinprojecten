@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { PhoneButton, WhatsAppButton } from "@/components/CtaButtons";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { MailButton, PhoneButton, PhoneNumberButton, WhatsAppButton } from "@/components/CtaButtons";
 import { Section } from "@/components/Section";
 import { JsonLd } from "@/components/JsonLd";
 import { company, workingAreas } from "@/lib/site-config";
@@ -58,28 +57,23 @@ export default function OverOnsPage() {
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={personJsonLd} />
 
-      {/* 1. Intro met grote foto */}
-      <Section tone="linen" className="!pb-0">
-        <div className="grid gap-10 lg:grid-cols-[5fr_7fr] lg:items-center">
-          <PlaceholderImage
-            src="lucas-stolk-planting.png"
-            alt="Lucas aan het werk in de tuin, met aandacht aan het planten"
-            aspect="4/5"
-            priority
-            photo
-          />
-          <div>
-            <p className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-moss">
-              Hovenier vanuit Wijngaarden
-            </p>
-            <h1 className="mt-4 max-w-[16ch] text-[clamp(2.75rem,6vw,5rem)] font-medium leading-[1.02] text-forest-deep">
-              {company.owner}
-            </h1>
-            <p className="mt-6 max-w-[48ch] font-sans text-[1.0625rem] leading-relaxed text-charcoal/85">
-              Eigenaar van Stolk Tuinprojecten en uw vaste aanspreekpunt voor
-              tuinontwerp en complete tuinaanleg — voor particulieren en bedrijven
-              in en rond Wijngaarden.
-            </p>
+      {/* 1. Intro */}
+      <Section tone="linen">
+        <div>
+          <p className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-moss">
+            Hovenier vanuit Wijngaarden
+          </p>
+          <h1 className="mt-4 max-w-[16ch] text-[clamp(2.75rem,6vw,5rem)] font-medium leading-[1.02] text-forest-deep">
+            {company.owner}
+          </h1>
+          <p className="mt-6 max-w-[48ch] font-sans text-[1.0625rem] leading-relaxed text-charcoal/85">
+            Eigenaar van Stolk Tuinprojecten en uw vaste aanspreekpunt voor
+            tuinontwerp en complete tuinaanleg — voor particulieren en bedrijven
+            in en rond Wijngaarden.
+          </p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <PhoneNumberButton />
+            <MailButton />
           </div>
         </div>
       </Section>

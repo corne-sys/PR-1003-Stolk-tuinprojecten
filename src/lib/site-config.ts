@@ -33,16 +33,16 @@ export const workingAreas = [
 
 export type NavItem = { label: string; href: string };
 
+/** Set to true when reviews are published: shows de Reviews-pagina in de navigatie en activeert de Review JSON-LD schema. */
+export const hasPublishedReviews = false;
+
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Over ons", href: "/over-ons" },
   { label: "Projecten", href: "/projecten" },
-  { label: "Reviews", href: "/reviews" },
+  ...(hasPublishedReviews ? [{ label: "Reviews", href: "/reviews" }] : []),
   { label: "Contact", href: "/contact" },
 ];
-
-/** Set to true when reviews are published to include Review JSON-LD schema. */
-export const hasPublishedReviews = true;
 
 export type Project = {
   slug: string;
@@ -57,14 +57,13 @@ export type Project = {
 };
 
 /**
- * PROJECTEN — gevuld vanuit de aangeleverde projectmappen (Fotos/Project1
- * t/m Project6). Titels/teksten zijn nog generiek; vervang door definitieve
+ * PROJECTEN — gevuld vanuit de aangeleverde projectmappen. Titels/teksten zijn nog generiek;
+ * vervang door definitieve
  * projectomschrijvingen zodra bekend. Verzin geen klantnamen, resultaten of
  * jaartallen.
  */
-export const projects: Project[] = Array.from({ length: 6 }, (_, i) => {
-  const n = i + 1;
-  const photoCount: Record<number, number> = { 1: 2, 2: 4, 3: 2, 4: 4, 5: 2, 6: 8 };
+export const projects: Project[] = [1, 2, 3, 4].map((n) => {
+  const photoCount: Record<number, number> = { 1: 4, 2: 2, 3: 4, 4: 8 };
   return {
     slug: `project-${n}`,
     title: `Project ${n}`,
@@ -88,9 +87,7 @@ export const projectThumbnails: Record<string, string> = {
   "project-1": "project-1-01.jpeg",
   "project-2": "project-2-01.jpeg",
   "project-3": "project-3-01.jpeg",
-  "project-4": "project-4-01.jpeg",
-  "project-5": "project-5-01.jpeg",
-  "project-6": "project-6-07.jpeg",
+  "project-4": "project-4-07.jpeg",
 };
 
 export type Review = {

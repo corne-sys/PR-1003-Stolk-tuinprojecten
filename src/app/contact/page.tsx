@@ -27,10 +27,6 @@ export default function ContactPage() {
     ],
   };
 
-  const routePlannerHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-    `${company.street}, ${company.postalCode} ${company.city}`
-  )}`;
-
   return (
     <>
       <JsonLd data={breadcrumbJsonLd} />
@@ -73,14 +69,6 @@ export default function ContactPage() {
                 {company.postalCode} {company.city}
               </li>
             </ul>
-            <a
-              href={routePlannerHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex font-sans text-sm font-medium text-forest-deep underline decoration-moss decoration-1 underline-offset-4 hover:text-moss"
-            >
-              Route plannen
-            </a>
           </div>
         </div>
       </Section>

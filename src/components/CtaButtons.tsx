@@ -32,6 +32,69 @@ export function WhatsAppIcon() {
   );
 }
 
+export function MailIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="3.5" y="5.5" width="17" height="13" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="M4.5 7l7.5 6 7.5-6"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function contactButtonTone(tone: Tone) {
+  return tone === "on-forest"
+    ? "border-linen text-linen hover:bg-linen/10"
+    : "border-forest-deep text-forest-deep hover:bg-forest-deep/5";
+}
+
+export function PhoneNumberButton({
+  tone = "on-linen",
+  className = "",
+}: {
+  tone?: Tone;
+  className?: string;
+}) {
+  return (
+    <a
+      href={telHref(company.phone)}
+      data-event="phone_click"
+      className={`inline-flex items-center gap-2.5 rounded-[6px] border-[1.5px] px-6 py-3 font-sans text-sm font-medium tracking-wide transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta ${contactButtonTone(
+        tone
+      )} ${className}`}
+    >
+      <PhoneIcon />
+      {company.phone}
+    </a>
+  );
+}
+
+export function MailButton({
+  tone = "on-linen",
+  className = "",
+}: {
+  tone?: Tone;
+  className?: string;
+}) {
+  return (
+    <a
+      href={`mailto:${company.email}`}
+      data-event="mail_click"
+      className={`inline-flex items-center gap-2.5 rounded-[6px] border-[1.5px] px-6 py-3 font-sans text-sm font-medium tracking-wide transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta ${contactButtonTone(
+        tone
+      )} ${className}`}
+    >
+      <MailIcon />
+      {company.email}
+    </a>
+  );
+}
+
 export function PhoneButton({
   className = "",
   fullWidth = false,

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { company, projects } from "@/lib/site-config";
+import { company, hasPublishedReviews, projects } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -18,12 +18,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    {
-      url: `${company.siteUrl}/reviews`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
+    ...(hasPublishedReviews
+      ? [
+          {
+            url: `${company.siteUrl}/reviews`,
+            lastModified: now,
+            changeFrequency: "monthly" as const,
+            priority: 0.5,
+          },
+        ]
+      : []),
     {
       url: `${company.siteUrl}/contact`,
       lastModified: now,
