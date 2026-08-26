@@ -9,7 +9,7 @@ import { company, getProjectBySlug, projects } from "@/lib/site-config";
 
 const projectImageFiles: Record<string, string[]> = {
   "project-1": ["project-2-01.jpeg", "project-1-02.jpeg", "project-1-03.jpeg", "project-1-04.jpeg"],
-  "project-2": ["project-2-02.jpeg", "project-2-01.jpeg"],
+  "project-2": ["project-2-02.jpeg"],
   "project-3": ["project-3-01.jpeg", "project-3-02.jpeg", "project-3-03.jpeg", "project-3-04.jpeg"],
   "project-4": [
     "project-4-07.jpeg",
