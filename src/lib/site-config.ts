@@ -85,7 +85,7 @@ export function getProjectBySlug(slug: string): Project | undefined {
 /** Thumbnail-foto per project, gebruikt op de projectenoverzichtpagina en homepage. */
 export const projectThumbnails: Record<string, string> = {
   "project-1": "project-2-01.jpeg",
-  "project-2": "project-2-01.jpeg",
+  "project-2": "project-2-02.jpeg",
   "project-3": "project-3-01.jpeg",
   "project-4": "project-4-07.jpeg",
 };
