@@ -68,6 +68,11 @@ export default function ContactPage() {
               <li>
                 {company.postalCode} {company.city}
               </li>
+              <li className="mt-2">
+                <a href={`mailto:${company.email}`} className="hover:text-moss">
+                  {company.email}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
