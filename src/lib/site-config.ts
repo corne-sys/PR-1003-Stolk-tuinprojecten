@@ -62,17 +62,19 @@ export type Project = {
  * projectomschrijvingen zodra bekend. Verzin geen klantnamen, resultaten of
  * jaartallen.
  */
-export const projects: Project[] = [1, 2, 3, 4].map((n) => {
-  const photoCount: Record<number, number> = { 1: 4, 2: 2, 3: 4, 4: 8 };
+// Slugs blijven stabiel (live URL's); titels worden op volgorde doorgenummerd.
+export const projects: Project[] = [1, 3, 4].map((n, index) => {
+  const photoCount: Record<number, number> = { 1: 3, 3: 4, 4: 8 };
+  const displayNumber = index + 1;
   return {
     slug: `project-${n}`,
-    title: `Project ${n}`,
+    title: `Project ${displayNumber}`,
     region: "Wijngaarden en omgeving",
     gardenType: "Tuinproject",
     description: "Foto's van dit tuinproject van Stolk Tuinprojecten.",
     services: [],
     images: Array.from({ length: photoCount[n] }, (_, j) => ({
-      alt: `Foto ${j + 1} van project ${n}`,
+      alt: `Foto ${j + 1} van project ${displayNumber}`,
       placeholderLabel: `Projectfoto ${j + 1}`,
     })),
   };
@@ -84,8 +86,7 @@ export function getProjectBySlug(slug: string): Project | undefined {
 
 /** Thumbnail-foto per project, gebruikt op de projectenoverzichtpagina en homepage. */
 export const projectThumbnails: Record<string, string> = {
-  "project-1": "project-2-01.jpeg",
-  "project-2": "project-2-02.jpeg",
+  "project-1": "project-1-02.jpeg",
   "project-3": "project-3-01.jpeg",
   "project-4": "project-4-07.jpeg",
 };
